@@ -4,13 +4,6 @@ Paper:
 
 https://journals.plos.org/plosone/article/comments?id=10.1371/journal.pone.0006791
 
-Data:
-
-https://www.dropbox.com/sh/hgxht7wm75xkvoi/AAC1YabvD0feMdqOCWmMjQDaa?dl=0
-
-Merged dataset for training models:
-
-https://disk.yandex.ru/d/B5NfnwoHG4QqBg
 
 
 # EMG dataset (8 channels) — description & metadata
