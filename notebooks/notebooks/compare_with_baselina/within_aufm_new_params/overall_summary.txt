@@ -1,0 +1,5 @@
+=== Within-Subject Overall Metrics ===
+acc_mean_over_seeds: 0.9366640268838544
+acc_std_over_seeds: 0.0
+f1_mean_over_seeds: 0.9361082910682388
+f1_std_over_seeds: 0.0

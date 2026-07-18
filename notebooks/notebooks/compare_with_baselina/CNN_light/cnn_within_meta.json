@@ -1,0 +1,13 @@
+{
+    "experiment_parameters": {
+        "seed": 42,
+        "architecture": "SimpleCNN",
+        "epochs": 150
+    },
+    "aggregated_metrics": {
+        "accuracy_mean": 0.9090721421950776,
+        "accuracy_std": 0.07482373495821898,
+        "f1_macro_mean": 0.9077460376150376,
+        "f1_macro_std": 0.07661307750147646
+    }
+}

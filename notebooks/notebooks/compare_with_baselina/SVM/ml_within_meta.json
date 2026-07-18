@@ -1,0 +1,13 @@
+{
+    "experiment_parameters": {
+        "seed": 42,
+        "validation": "within-subject",
+        "k_folds": 5
+    },
+    "aggregated_metrics": {
+        "accuracy_mean": 0.877328363773057,
+        "accuracy_std": 0.08821873648968581,
+        "f1_macro_mean": 0.876058797808285,
+        "f1_macro_std": 0.08988716943349444
+    }
+}

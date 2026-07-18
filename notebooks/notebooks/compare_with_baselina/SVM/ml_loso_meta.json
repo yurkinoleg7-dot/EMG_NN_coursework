@@ -1,0 +1,12 @@
+{
+    "experiment_parameters": {
+        "seed": 42,
+        "validation": "loso"
+    },
+    "aggregated_metrics": {
+        "accuracy_mean": 0.24166775670093962,
+        "accuracy_std": 0.0745021123017461,
+        "f1_macro_mean": 0.2048477987433889,
+        "f1_macro_std": 0.0710873349316538
+    }
+}

@@ -1,0 +1,9 @@
+=== LOSO Overall Metrics ===
+acc_mean_over_seeds: 0.6924419862691338
+acc_std_over_seeds: 0.0
+f1_mean_over_seeds: 0.6721382911196112
+f1_std_over_seeds: 0.0
+
+=== Metrics By Seed ===
+   seed  overall_acc_mean  overall_acc_std  overall_f1_mean  overall_f1_std
+0    42          0.692442          0.21669         0.672138        0.231625

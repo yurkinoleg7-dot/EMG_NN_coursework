@@ -1,0 +1,69 @@
+{
+  "name": "8ch_EMG_digits",
+  "version": "draft-0",
+  "source": {
+    "raw_format": "MATLAB .mat",
+    "raw_keys_expected": [
+      "export_EMG",
+      "export_Type",
+      "export_Trial",
+      "export_OnPaper"
+    ],
+    "raw_filename_pattern": "export*_*.mat",
+    "raw_directory_example": "data_8ch_EMG/"
+  },
+  "recordings": [
+    { "filename": "export1_13Nov07.mat", "subject": "J" },
+    { "filename": "export1_15Nov07.mat", "subject": "S" },
+    { "filename": "export1_30Nov07.mat", "subject": "C" },
+    { "filename": "export1_19Dec07.mat", "subject": "M1" },
+    { "filename": "export1_20Dec07.mat", "subject": "B" },
+    { "filename": "export1_21Dec07.mat", "subject": "A" },
+    { "filename": "export1_2Jan08.mat", "subject": "M2" },
+    { "filename": "export1_3Jan08.mat", "subject": "M3" },
+    { "filename": "export1_7Jan08.mat", "subject": "M4" },
+    { "filename": "export1_15Jan08.mat", "subject": "M5" },
+    { "filename": "export1_24Jan08.mat", "subject": "M6" }
+  ],
+  "subjects_note": "11 recordings total; one subject (mlinder) recorded across 6 different days.",
+  "channels": {
+    "n_channels": 8,
+    "emg_sequence0_muscle_ids_by_channel_1based": [3, 5, 8, 7, 2, 4, 1, 6],
+    "muscle_id_to_name": {
+      "1": "extensor carpi radialis (ECR)",
+      "2": "flexor carpi radialis (FCR)",
+      "3": "opponens pollicis (OP)",
+      "4": "extensor digitorum (ED)",
+      "5": "abductor pollicis brevis (APB)",
+      "6": "extensor carpi ulnaris (ECU)",
+      "7": "lateral (lFDI) head of first dorsal interosseus",
+      "8": "medial (mFDI) head of first dorsal interosseus"
+    }
+  },
+  "sampling": {
+    "fs_hz_emg": 1000,
+    "fs_hz_tablet": 100
+  },
+  "labeling": {
+    "raw_export_type_offset": -1,
+    "label_values_expected": "Integers after applying (export_Type - 1)."
+  },
+  "preprocessing": {
+    "trial_boundary_source": "export_Trial",
+    "trial_start_marks_rule": "marks start with [0]; append index i+1 whenever export_Trial[i+1] != export_Trial[i].",
+    "windowing": {
+      "method": "fixed window centered between consecutive trial start marks",
+      "half_window_size_samples": 1400,
+      "window_len_samples": 2800
+    },
+    "label_per_window": "For each window, label = int(mean((export_Type - 1) window)).",
+    "important_note": "To match the original notebook, the last trial segment is not extracted because the end index is not appended to marks."
+  },
+  "derived_dataset_mat": {
+    "filename": "dataset.mat",
+    "keys": {
+      "data": "EMG windows (n_trials_total, window_len, n_channels)",
+      "label": "Integer label per window (n_trials_total,)"
+    }
+}
+}
